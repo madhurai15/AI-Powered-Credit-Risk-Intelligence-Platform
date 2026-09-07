@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+joblib
+mysql-connector-python
+SQLAlchemy
+huggingface_hub
+shap
+streamlit

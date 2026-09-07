@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+
+    container_name: credit_risk_app
+
+    ports:
+      - "8501:8501"
+
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./documents:/app/documents
+
+    env_file:
+      - .env
+
+    restart: unless-stopped
+
+    command:
+      [
+        "streamlit",
+        "run",
+        "app.py",
+        "--server.address=0.0.0.0",
+        "--server.port=8501"
+      ]
