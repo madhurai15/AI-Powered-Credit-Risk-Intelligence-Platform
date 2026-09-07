@@ -167,7 +167,7 @@ def load_data():
     return pd.read_csv(
         os.path.join(
             DATA_DIR,
-            "application_train.csv"
+            "application_train.xlsx"
         )
     )
 
