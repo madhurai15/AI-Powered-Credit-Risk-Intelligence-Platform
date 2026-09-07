@@ -7,3 +7,4 @@ SQLAlchemy
 huggingface_hub
 shap
 streamlit
+openpyxl
