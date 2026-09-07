@@ -163,8 +163,7 @@ def load_model():
 
 @st.cache_data
 def load_data():
-
-    return pd.read_csv(
+    return pd.read_excel(
         os.path.join(
             DATA_DIR,
             "application_train.xlsx"
