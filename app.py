@@ -11,7 +11,6 @@ import streamlit as st
 # =========================================================
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-SRC_DIR = os.path.join(BASE_DIR, "src")
 DATA_DIR = os.path.join(BASE_DIR, "data")
 MODEL_PATH = os.path.join(
     BASE_DIR,
@@ -19,10 +18,7 @@ MODEL_PATH = os.path.join(
     "credit_risk_model.joblib"
 )
 
-if SRC_DIR not in sys.path:
-    sys.path.insert(0, SRC_DIR)
-
-from data.preprocessor import clean_data
+from preprocessor import clean_data
 
 
 # =========================================================
@@ -1399,8 +1395,8 @@ elif section == "Talk to Data":
 
                 try:
 
-                    from talk_to_data.nl_to_sql import generate_sql
-                    from talk_to_data.query_runner import run_query
+                    from nl_to_sql import generate_sql
+                    from query_runner import run_query
 
                     with st.spinner("Analyzing..."):
 
